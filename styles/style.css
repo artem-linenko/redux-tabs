@@ -1,0 +1,20 @@
+.tabs-container {
+	float: left;
+	width: 100px;
+}
+
+.tab {
+	cursor: pointer;
+	padding: 10px;
+}
+
+.content-container {
+	margin-left: 100px; 
+	padding: 20px
+}
+
+button {
+	display: block;
+	margin-top: 10px;
+	padding: 5px
+}
