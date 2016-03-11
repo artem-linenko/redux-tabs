@@ -5,9 +5,9 @@ import { Provider } from 'react-redux'
 import { createStore,  applyMiddleware} from 'redux'
 import thunkMiddleware from 'redux-thunk'
 import createLogger from 'redux-logger'
-import reducers from './reducers/tabs.js'
+import reducers from './reducers'
 import App from './components/App'
-import initialState from './tabsInfo'
+import initialState from './initialState'
 import styles from './styles/style.css'
 
 let loggerMiddleware = createLogger();

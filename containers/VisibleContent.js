@@ -14,7 +14,8 @@ const getChosenTab = (tabs) => {
 
 const mapStateToProps = (state) => {
   return {
-    tab: getChosenTab(state)
+    tab: getChosenTab(state.tabs),
+    content: state.content
   }
 }
 

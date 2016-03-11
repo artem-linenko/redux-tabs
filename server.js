@@ -22,7 +22,10 @@ app.get("/", function(req, res) {
 
 app.post('/api', function(req, res) {
 	console.log(req.body);
-	res.send("Here is your response for " + req.body.tab + " tab content");
+
+	setTimeout(function() {
+		res.send("Here is your response for " + req.body.tab + " tab content");
+	}, 1000)
 })
 
 app.listen(port, function(error) {

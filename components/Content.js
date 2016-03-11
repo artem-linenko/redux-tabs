@@ -1,9 +1,20 @@
 import React, { PropTypes } from 'react'
 
-const Content = ({tab, onChooseClick}) => (
+const Content = ( {tab, content, onChooseClick} ) => (
 	<div className="content-container">
 		{tab.content}
-		<button className="chooseButton" onClick = {() => onChooseClick(tab.tabName)} > Send request </button>
+		<button 
+			className="chooseButton"
+			disabled = {content.status == "UPLOADING"}
+			onClick = {() => onChooseClick(tab.tabName)} 
+		> Send {tab.tabName} request </button>
+
+		<p 
+			className = "content-text"
+			style = {{
+				display: content.status == "UPLOADED" ? 'block' : 'none'
+			}}
+			>{content.text}</p>
 	</div>
 )
 

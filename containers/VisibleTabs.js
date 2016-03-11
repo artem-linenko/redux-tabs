@@ -4,7 +4,7 @@ import Tabs from '../components/Tabs'
 
 const mapStateToProps = (state) => {
   return {
-    tabs: state
+    tabs: state.tabs
   }
 }
 
